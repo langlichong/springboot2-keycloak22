@@ -1,0 +1,9 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          #issuer-uri: http://192.168.54.3:9090/realms/SpringBootKeycloak
+          #jwk-set-uri: http://192.168.54.3:9090/realms/SpringBootKeycloak/protocol/openid-connect/certsissuer-uri: http://192.168.54.3:9090/realms/SpringBootKeycloak
+          issuer-uri:  https://192.168.54.3:8844/realms/SpringBootKeycloak
+          jwk-set-uri: https://192.168.54.3:8844/realms/SpringBootKeycloak/protocol/openid-connect/certs

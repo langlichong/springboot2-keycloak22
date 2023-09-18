@@ -1,0 +1,2 @@
+- keycloak22.0.3-RestAPI.json 中内容是从 API Tester 客户端导出的 
+- 测试时可以使用postman 导入或者安装 ApiTester 的浏览器插件然后导入
