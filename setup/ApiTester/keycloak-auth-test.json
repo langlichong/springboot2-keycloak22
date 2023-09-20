@@ -24,6 +24,58 @@
                   {
                     "enabled": true,
                     "type": "Text",
+                    "name": "grant_type",
+                    "value": "client_credentials"
+                  }
+                ]
+              },
+              "bodyType": "Form"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "192.168.54.3:8844",
+              "path": "/realms/SpringBootKeycloak/protocol/openid-connect/token"
+            },
+            "id": "8a42f5c3-1fd5-4092-ba4e-73d3a43f2db8",
+            "name": "Client_basic_auth",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "Basic bG9naW4tYXBwOmRyMFVscG9ZVHk1d3BQd2hhVnc3WHBROENaQlNIZmhy"
+              },
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": [
+                  {
+                    "enabled": true,
+                    "type": "Text",
                     "name": "client_id",
                     "value": "login-app"
                   },
@@ -124,7 +176,72 @@
               {
                 "enabled": true,
                 "name": "Authorization",
-                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJUUFVnM09mbmFzSlNjcjVLM2Nzby04b0M5SHliRlI3QUM4Ui0zaDJ1ajBrIn0.eyJleHAiOjE2OTUwNTQ2MTgsImlhdCI6MTY5NTAyOTQxOCwianRpIjoiMTEzY2IyNmYtMjZmZS00MjJlLThiYjYtYmIxMGVkM2NhOWY3IiwiaXNzIjoiaHR0cDovLzE5Mi4xNjguNTQuMzo5MDkwL3JlYWxtcy9TcHJpbmdCb290S2V5Y2xvYWsiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiMGEyNjc0NTMtODg2Zi00ZTAxLWI2MDYtY2YzMWZiMmRkNzVhIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibG9naW4tYXBwIiwic2Vzc2lvbl9zdGF0ZSI6ImFkNzBjMzAxLTRlYjktNDliNS1iNjY2LTY0OTc2ZmY5YTFlYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovLzE5Mi4xNjguMTYuNTg6ODA4MCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXNwcmluZ2Jvb3RrZXljbG9hayIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImFkNzBjMzAxLTRlYjktNDliNS1iNjY2LTY0OTc2ZmY5YTFlYSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidXNlcjEiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIifQ.CCb8Xkx03mGAYGtzCtnyDdPTzbECwUP1tiPVLoyTNOjfU1qammI99_4japTQVg9JdKOD-qtrWFd_tOP8OC5g8SMPqs0UNeGNoU3gr-mxalvKsLMtUU5649_Nc_V9klKXVEnf-zuF4ijZV3p2MZ_NCD3582QCBCf0x-dzLdb-ecDcOC0N94-Foab1NfhZs-S01WClHkV1pbBiLhlgfLf7LtQys-pXCF7SzP0ypCFRi_VzqET3FzlhLQ9FlDNKxB1xOxFdNBSDA4nC50XCgsjWxY1B63GxHLmgOZzH_6rNaLJTqag7nXDl7zQwlztc_1hGLZNiHdkRezH5DyHaL17lwQ"
+                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJUUFVnM09mbmFzSlNjcjVLM2Nzby04b0M5SHliRlI3QUM4Ui0zaDJ1ajBrIn0.eyJleHAiOjE2OTUwNTg4NzYsImlhdCI6MTY5NTAzMzY3NiwianRpIjoiODMyZGUyMjMtMGE3My00NTg3LTgxNzUtOGFhMTRiMTQxY2ZkIiwiaXNzIjoiaHR0cHM6Ly8xOTIuMTY4LjU0LjM6ODg0NC9yZWFsbXMvU3ByaW5nQm9vdEtleWNsb2FrIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAzMzBlMTdiLWFmNWItNDg5Ni05N2MwLTlmZTE1ZDRjNmM3OCIsInR5cCI6IkJlYXJlciIsImF6cCI6ImxvZ2luLWFwcCIsInNlc3Npb25fc3RhdGUiOiJhYzU3ZGYxNy1iZjA1LTRhOTgtYWI1Yy05ZGJiYjdiMDk5YmUiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly8xOTIuMTY4LjE2LjU4OjgwODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1zcHJpbmdib290a2V5Y2xvYWsiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImFjNTdkZjE3LWJmMDUtNGE5OC1hYjVjLTlkYmJiN2IwOTliZSIsImNsaWVudEhvc3QiOiIxOTIuMTY4LjE2LjU4IiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtbG9naW4tYXBwIiwiY2xpZW50QWRkcmVzcyI6IjE5Mi4xNjguMTYuNTgiLCJjbGllbnRfaWQiOiJsb2dpbi1hcHAifQ.W_VjEp2hY70qavSepjEfdu6uZCHv4xMMv_orgAF7SVn4K-ldWDqGAcp-IlKsPc-jbZVBjhAcqAoRUn72RrZNZAAdEtIXlH-jISRuM82eB-Rc5plkb8qFC-_HQwMvrynwnm09CgaSzkBYTzVP61Am_ElzVNWPGU3qeBc_LWCYOsEZLrrqw0SimuTwpRT35OjV8Q1gJxBeszyfFEFB6uVCgsBTmdjml1x9kvAzYZk6bpALAFyaFRjYb5lKEK_Wmi9MjpWO2DAU-RD2tCwEXm4S2G1IIoI0aaMDarcTysCDeMdHCfi2t7-XMtMp7zi5aNOMT0gKA6V1Fiz3NpSeLfEh3A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": [
+                  {
+                    "enabled": true,
+                    "type": "Text",
+                    "name": "client_id",
+                    "value": "public_client"
+                  },
+                  {
+                    "enabled": true,
+                    "type": "Text",
+                    "name": "username",
+                    "value": "user1"
+                  },
+                  {
+                    "enabled": true,
+                    "type": "Text",
+                    "name": "password",
+                    "value": "123321"
+                  },
+                  {
+                    "enabled": true,
+                    "type": "Text",
+                    "name": "grant_type",
+                    "value": "password"
+                  }
+                ]
+              },
+              "bodyType": "Form"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "192.168.54.3:8844",
+              "path": "/realms/SpringBootKeycloak/protocol/openid-connect/token"
+            },
+            "id": "c7fa091f-895a-453b-bbc9-e7725ab91a4a",
+            "name": "public_client_auth",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
               }
             ]
           }
@@ -241,7 +358,7 @@
               "path": "/realms/SpringBootKeycloak/protocol/openid-connect/token"
             },
             "id": "2a0c95db-c3c0-44fd-bd5c-608b88253ca9",
-            "name": "客户端通过某个用户账号获取授权",
+            "name": "客户端通过某个用户账号获取授权(password)",
             "headers": [
               {
                 "enabled": true,
